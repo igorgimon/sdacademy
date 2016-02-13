@@ -1,28 +1,30 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
  <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Detail</title>
-  <link href="../static/css/bootstrap.css" rel="stylesheet">
-  <link href="../static/css/style.css" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'js/bootstrap.js' %}" rel="stylesheet">
  </head>
  <body>
   <nav class="navbar navbar-default">
    <div class="container-fluid">
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
      <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html" >Main</a></li>
-      <li><a href="contact.html">Contacts</a></li>
-      <li><a href="student_list.html">Students</a></li>
+             <li class="active"><a href="{% url 'index' %}" >Main</a></li>
+             <li><a href="{% url 'contact' %}" >Contacts</a></li>
+             <li><a href="{% url 'student_list' %}" >Students</a></li>
      </ul>
     </div>
    </div>
   </nav>
   <div class="container" align="left" >
    <h1 class="personal">Uncle Mike</h1>
-   <p><img class="personal" src="../static/images/Bqe0wNOrqHo.jpg">  </p>
+   <p><img class="personal" src="{% static 'images/Bqe0wNOrqHo.jpg' %}">  </p>
    <p><a href="https://www.youtube.com/watch?v=jjMYho9glN0"><button type="button" class="btn btn-lg btn-default">Дядя Миша о себе</button></a></p>
    <h2>Student's card</h2>
    <div class="col-md-8">

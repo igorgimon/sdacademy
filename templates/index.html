@@ -1,21 +1,23 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SD Academy 40k</title>
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
-    <link href="../static/css/style.css" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'js/bootstrap.js' %}" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav">
-             <li class="active"><a href="index.html" >Main</a></li>
-             <li><a href="contact.html">Contacts</a></li>
-             <li><a href="student_list.html">Students</a></li>
+             <li class="active"><a href="{% url 'index' %}" >Main</a></li>
+             <li><a href="{% url 'contact' %}" >Contacts</a></li>
+             <li><a href="{% url 'student_list' %}" >Students</a></li>
            </ul>
         </div>
      </div>
@@ -25,19 +27,19 @@
   </div>
     <div class = "container"> 
       <h2>Это 41 тысячелетие</h2>
-      <p><img src="../static/images/3206474-emperor_of_mankind_by_genzoman.jpg" align="right"> </p>
+      <p><img src="{% static 'images/3206474-emperor_of_mankind_by_genzoman.jpg' %}" align="right"> </p>
       <p>	Вот уже более ста веков Император недвижимо сидит на Золотом Троне. Он - повелитель человечества и  владыка миллионов миров, правящий силой своих неистощимых армий. Он - гниющий заживо труп, в котором жизнь теплится только благодаря технологическим чудесам Тёмной Эры Технологий. Он - правящий из могилы бессмертный повелитель огромной Империи Людей, которому приносят в жертву тысячи жизней каждый день. Даже в своём нынешнем состоянии, Император продолжает свою вечную бдительность. Могучие флоты пересекают кишащие демонами миазмы Варпа, единственный путь между далёкими звёздами, их путь освещён светом Астрономикона, психическим проявлением воли Императора. Огромные армии сражаются во имя Его на бесчисленных мирах. Величайшие среди его солдат - Адептус Астартес, Космические Десантники, супер-воины, созданные с помощью биоинженерии. Их братья по оружию - это легионы Имперской Гвардии и бесчисленные планетарные силы обороны, всевидящая Инквизиция и техножрецы Адептус Механикус. Здесь названы лишь немногие. Но даже всего этого множества едва хватает, чтобы сдерживать вездесущие угрозы для человечества: ксеносов, еретиков, мутантов и гораздо, гораздо худшие вещи. Быть человеком в такие времена это быть одним из бесчисленных миллиардов. Это значит жить под пятой самого жестокого и кровавого режима в истории человечества. Забудьте силу науки и технологии, как многое забылось, чтобы никогда не быть открытым заново. Забудьте прогресс и понимание, ибо во мрачной тьме далёкого будущего есть только война. Среди звёзд нет места миру, только бесконечность резни и бойни, и смех безжалостных богов</span></p>
     </div>
   </div>
     <div class = "container">
       <h2>Око Ужаса</h2>
-      <p><img src="../static/images/Eye_of_Terror.jpg" align="right"></p>
+      <p><img src="{% static 'images/Eye_of_Terror.jpg' %}" align="right"></p>
       <p>	К северо-западу от Терры, далеко на краю Галактики находится место, называемое Око Ужаса. Внешне Око Ужаса действительно похоже на глаз, и представляет собой водоворот звезд, являющийся центром постоянного варп-шторма. Это одно из уникальных мест в Галактике, а уникально оно тем, что там пересекаются реальный мир и варп-пространство. Неудивительно, что именно оно было выбрано последователями Хаоса — ведь через Око Ужаса демоны могут напрямую общаться со своими последователями.</span></p>
     </div>
   </div>
   <div class = "container">
      <h2>А теперь о Python Program</h2>
-     <p><img class="sqr" src="../static/images/adeptus_mechanicus_by_toxxxsin-d56tq8n.jpg" align="right"></p>
+     <p><img class="sqr" src="{% static 'images/adeptus_mechanicus_by_toxxxsin-d56tq8n.jpg' %}" align="right"></p>
      <p>	А теперь, юный адепт Механикус, когда ты осознал всю тяжесть проблем, стоящих перед Империумом Человечества, узнай же, для какой святой миссии ты был избран Богом-Машиной в почетные магосы Лингва Питонис.<br />
     <h4 align="center">С помощью языка Python ты сможешь:</h4>
       <ul>

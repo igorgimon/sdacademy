@@ -1,21 +1,23 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Students</title>
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
-    <link href="../static/css/style.css" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'js/bootstrap.js' %}" rel="stylesheet">
   </head>
 <body>
  <nav class="navbar navbar-default">
   <div class="container-fluid">
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-     <li class="active"><a href="index.html" >Main</a></li>
-     <li><a href="contact.html">Contacts</a></li>
-     <li><a href="student_list.html">Students</a></li>
+             <li class="active"><a href="{% url 'index' %}" >Main</a></li>
+             <li><a href="{% url 'contact' %}" >Contacts</a></li>
+             <li><a href="{% url 'student_list' %}" >Students</a></li>
     </ul>
    </div>
   </div>
@@ -37,7 +39,7 @@
      </tr>
     </thead>
     <tbody>
-     <tr><td><a href="student_detail.html">1</a></td><td>Uncle</td><td>Mike</td><td>Helican subsector, Tracian Primaris, Hivecity 15, level 2</td><td>old_bald</td></tr>
+     <tr><td><a href="{% url 'student_detail' %}">1</a></td><td>Uncle</td><td>Mike</td><td>Helican subsector, Tracian Primaris, Hivecity 15, level 2</td><td>old_bald</td></tr>
      <tr><td>2</td><td>15614</td><td>002548</td><td>Tempestus segmentum, Krieg, bunker 2548</td><td>guardsman15487</td></tr>
      <tr><td>3</td><td>Wennehr</td><td>Karis</td><td>Tempestus segmentum, Krieg, bunker 675</td><td>loyal_colonel</td></tr>
      <tr><td>4</td><td>Isaykin</td><td>Sergey</td><td>Deep Space</td><td>rogue_trader</td></tr>
