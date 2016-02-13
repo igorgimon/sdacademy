@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+Квадратное уравнение a*x*x + b*x + c = 0
+<br>
+<li>a= {{a}}</li>
+{% if errmessage_a %}
+{{errmessage_a}}
+{% endif %}
+<li>b= {{b}}</li>
+{% if errmessage_b %}
+{{errmessage_b}}
+{% endif %}
+<li>c= {{c}}</li>
+{% if errmessage_c %}
+{{errmessage_c}}
+{% endif %}
+{% if message_discr %}
+Дискриминант: {{discr}}
+{% endif %}
+<br>
+{% if message_discr %}
+{{message_discr}}
+{% endif %}
+</html>
