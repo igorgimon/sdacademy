@@ -35,12 +35,12 @@ def quadratic_results(request):
             if discr < 0:
                 message_discr = 'Дискриминант меньше нуля, квадратное уравнение не имеет действительных решений.'
             elif discr == 0:
-                x1 = -int(b)/(2*int(a))
-                message_discr = 'Дискриминант равен нулю, квадратное уравнение имеет один действительный корень: x1 = x2 = %d:' % x1
+                x1 = -int(b)/(2.0*int(a))
+                message_discr = 'Дискриминант равен нулю, квадратное уравнение имеет один действительный корень: x1 = x2 = %s:' % str(x1)
             else:
-                x1 = (-int(b) + math.sqrt(discr))/(2*int(a))
+                x1 = (-int(b) + math.sqrt(discr))/(2.0*int(a))
                 x2 = (-int(b) - math.sqrt(discr))/(2*int(a))
-                message_discr = 'Квадратное уравнение имеет два действительных корня: x1 = %d, x2 = %d' % (x1, x2)
+                message_discr = 'Квадратное уравнение имеет два действительных корня: x1 = %s, x2 = %s' % (str(x1), str(x2))
         except ValueError, TypeError:
             pass
     if (a and b and c):
